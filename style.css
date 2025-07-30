@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap');
+
+body {
+   margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+    display: flex;
+    justify-content: center;
+align-items: center;
+ overflow: hidden;
+  
+  
+ background:linear-gradient(45deg, #ffb8e0, #ffffff, #FFB8E0);
+}
+
+.envelope {
+  width: 350px;
+  height: 250px;
+  background-color: #FF90BB;
+  border-radius: 20px;
+  display: flex;
+ 
+  align-items: center;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  border-bottom: 140px solid #FFC1DA;
+  position: relative;
+  right: 56px;
+  display: inline-block;
+  transform: rotate(90deg);
+  border-radius: 20px;
+}
+.triangle1 {
+  z-index: 4;
+}
+.triangle2 {
+  transform: rotate(270deg);
+  position: relative;
+  display: inline-block;
+  right: 94px;
+  z-index: 4;
+}
+.triangle3 {
+  transform: rotate(180deg);
+  border-left: 175px solid transparent;
+  border-right: 178px solid transparent;
+  border-bottom: 160px solid #FF90BB;
+  position: relative;
+  right: 500px;
+  bottom: 45px;
+  z-index: 2;
+  transition: transform 0.6s ease;
+}
+.triangle4 {
+  transform: rotate(0deg);
+  border-left: 175px solid transparent;
+  border-right: 178px solid transparent;
+  border-bottom: 160px solid #FF90BB;
+  position: relative;
+  right: 852px;
+  bottom: -45px;
+  z-index: 4;
+}
+.heart {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #F8F8E1;
+  transform: rotate(-45deg);
+  right: -27px;
+  bottom: -65px;
+  z-index: 4;
+  cursor: pointer;
+}
+.heart::before,
+.heart::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #F8F8E1;
+  border-radius: 50%;
+}
+.heart::before {
+  top: -25px;
+  left: 0;
+}
+.heart::after {
+  left: 25px;
+  top: 0;
+}
+.open {
+  transition: transform 0.3s ease-in-out;
+  border-radius: 20px;
+  border-left: 175px solid transparent;
+  border-right: 178px solid transparent;
+  transform: rotateY(180deg) translateY(-150px);
+  transition: transform 0.6s ease;
+}
+.card {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  padding: 10px 10px;
+  background-image: url(first.jpg);
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transition: transform 0.6s ease;
+  border-radius: 10px;
+  border: 5px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.card-open {
+  z-index: 3;
+}
+.btns {
+  position: absolute;
+  width: 100%;
+  justify-content: space-around;
+  bottom: 20px;
+  display: flex;
+}
+.button {
+  background-color: #FF90BB;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card-wishes {
+  font-family: "Playwrite AU QLD", cursive;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.8;
+  color: white;
+  text-shadow: 0 0 10px #f60763;
+}
+/* game page */
+
+.gamePage {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(73, 1, 1, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transform: translatex(100vw);
+
+  font-family: 'Comic Neue', cursive;
+  background: linear-gradient(to bottom, #ffd6e8, #ffc4dd);
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 2vw;
+  min-height: 100vh;
+}
+
+.heading {
+  color: #d63384;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.counter {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin-bottom: 1rem;
+  color: #5a2c4e;
+}
+
+.game-area {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 60vh;
+  margin: 1rem 0;
+}
+
+.heart-button {
+  position: absolute;
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  background-color: #fff0f5;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 10px pink;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.message-box {
+  background: #fff0fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 90%;
+  width: 100%;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #5e2a6c;
+}
+
+.final-popup {
+  background: #fff0f8;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff80ab;
+  color: #c2185b;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  max-width: 95%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-evenly;
+  text-align: center;
+  margin-top: -36rem;
+  height: 25rem;
+  transition: 0.5s ease;
+  z-index: 1;
+}
+
+.final-popup img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+
+.btn1 {
+  background-color: #ff80ab;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-top: 1rem;
+  box-shadow: 0 0 10px rgba(255, 128, 171, 0.5);
+}
+
+.floating-heart {
+  position: fixed;
+  animation: float 4s infinite ease-in-out;
+  font-size: 24px;
+  color: #ff80ab;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+@keyframes fadeout {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0); }
+}
