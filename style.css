@@ -116,6 +116,7 @@ align-items: center;
   background-color: white;
   transition: transform 0.6s ease;
   border-radius: 10px;
+  margin-top: 2 rem;
   border: 5px solid #ffffff;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
